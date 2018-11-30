@@ -1,0 +1,245 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Display', 'Helvetica', 'Spoqa Han Sans', 'Source Sans Pro', 'Sans-serif';
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+  text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%; 
+  -moz-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+button {
+  -webkit-appearance: button;
+  outline: none;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 50px 5%;
+  }
+  
+  hr {
+    background-color: #dddddd;
+    height: 1px;
+    border: 0;
+    margin: 10px 0;
+  }
+  
+  .none-hr {
+    background-color: transparent;
+  }
+  
+  
+  /* modal */
+  .download-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #DFDFDF;
+    margin: 20% auto; /* 15% from the top and centered */
+    border: none;
+    border-radius: 8px;
+    width: 35%; /* Could be more or less, depending on screen size */
+    text-align: center;
+  }
+  
+  .modal-container {
+    padding: 10px 15px;
+  }
+  
+  .modal-content p {
+    font-family: 'Spoqa Han Sans', 'Source Sans Pro', 'Sans-serif';
+    font-size: 3rem;
+    font-weight: 100;
+  }
+  
+  .close {
+    color: #007BFF;
+    font-size: 0.9rem;
+    /*font-weight: 300;*/
+  }
+  
+  .close:hover, .close:focus {
+    opacity: 0.7;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-title {
+    font-size: 1.2rem;
+  }
+  
+  .modal-hr {
+    background-color: #BBBBBB;
+    height: 1px;
+    border: 0;
+    margin: 0;
+  }
+  
+  /*Link*/
+  .blue-link {
+    font-size: 0.8rem;
+    color: #007BFF;
+  }
+  
+  .back-btn {
+    margin-bottom: 10px;
+  }
+  
+  .back-btn p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #007BFF;
+  }
+  
+  .back-btn-image {
+    width: 15px;
+  }
+}
+
+
+
+@media only screen and (max-device-width: 600px) {
+  hr {
+    margin: 30px 0;
+  }
+  
+  #today-hr, .none-hr {
+    background-color: transparent;
+    margin: 10px 0;
+  }
+  
+  /* Modal */
+  .download-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #DFDFDF;
+    border: none;
+    border-radius: 0px;
+    margin: 0 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .modal-container {
+    padding: 30px 50px;
+  }
+  
+  .modal-content p {
+    font-family: 'Spoqa Han Sans', 'Source Sans Pro', 'Sans-serif';
+    font-size: 7rem;
+    font-weight: 100;
+    color: #181818;
+  }
+  
+  .close {
+    color: #007BFF;
+    font-size: 2.5rem;
+  }
+  
+  .modal-title {
+    font-size: 3rem;
+  }
+  
+  /* Link */
+  .blue-link {
+    font-size: 1.9rem;
+  }
+  
+  .back-btn {
+    margin-bottom: 20px;
+  }
+  
+  .back-btn p {
+    font-size: 2.5rem;
+  }
+  
+  .back-btn-image {
+    width: 35px;
+    margin-right: 10px;
+  }
+}

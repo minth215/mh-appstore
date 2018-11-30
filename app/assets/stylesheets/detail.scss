@@ -1,0 +1,154 @@
+// Place all the styles related to the detail controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$appstore-blue: #007BFF;
+$appstore-blue-hover: #004998;
+$appstore-gray: #EEF1F7;
+$appstore-gray-hover: #8F9094;
+$appstore-gray-font: #8B9093;
+$appstore-lightgray-font: #B2B4B7;
+
+@media only screen and (min-width: 600px) {
+  // version.html.erb (버전 기록)
+  .detail-container {
+    margin: 30px 20%;
+  }
+  
+  .detail-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .version-title {
+    margin-bottom: 7px;
+  }
+  
+  .version-name {
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  
+  .version-date {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: $appstore-gray-font;
+  }
+  
+  .version-content {
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  
+  .version-content-gray {
+    color: $appstore-gray-font;
+    font-size: 0.7rem;
+  }
+  
+  // reviews.html.erb (평가 및 리뷰)
+  .sub-section-title {
+    font-size: 1.1rem;
+  }
+  
+  // projects.html.erb (Myunghee Roh)
+  .app-set {
+    margin: 15px 0;
+  }
+  
+  .app-small-icon {
+    border-radius: 25px;
+    border: 1px solid #D2D4D7;
+    width: 95px;
+    height: 95px;
+  }
+  
+  .app-description-width {
+    width: 100%;
+  }
+  
+  .project-app-description {
+    margin-left: 10px;
+  }
+  
+  .project-app-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  
+  .project-category {
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    color: $appstore-gray-font;
+  }
+}
+
+
+@media only screen and (max-device-width: 600px) {
+  // version.html.erb (버전 기록)
+  .detail-container {
+    margin: 50px 5%;
+  }
+  
+  .detail-section-title {
+    font-size: 3.5rem;
+  }
+  
+  .version-title {
+    margin-bottom: 10px;
+  }
+  
+  .version-name {
+    font-size: 2rem;
+  }
+  
+  .version-date {
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+  
+  .version-content {
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+  }
+  
+  .version-content-gray {
+    font-size: 1.8rem;
+  }
+  
+  // reviews.html.erb (평가 및 리뷰)
+  .sub-section-title {
+    font-size: 3rem;
+  }
+  
+  // projects.html.erb (Myunghee Roh)
+  .app-set {
+    margin: 20px 0;
+  }
+  
+  .app-small-icon {
+    border-radius: 70px;
+    border: 1px solid #D2D4D7;
+    width: 25%;
+    height: 25%;
+  }
+  
+  .app-description-width {
+    width: 100%;
+  }
+  
+  .project-app-description {
+    margin-left: 20px;
+  }
+  
+  .project-app-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .project-category {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+}

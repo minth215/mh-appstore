@@ -1,0 +1,287 @@
+<section class="info-container">
+  <a href="/" class="back-btn flex-start flex-align-items-center">
+    <%= image_tag "back-btn.png", class: "back-btn-image" %>
+    <p>뒤로</p>
+  </a>
+  <div class="info-top">
+    <%= image_tag "app-icon.jpg", alt: "app icon", class: "info-app-icon" %>
+    <div class="info-app-description">
+      <div>
+        <h1 class="info-app-title">OptimusMyang</h1>
+        <p class="info-developer">Myunghee Roh</p>
+      </div>
+      <div class="flex-space-between flex-align-items-center">
+        <button id="modal-btn" class="download-btn blue-ver">받기</button>
+        
+        <!--Download Modal-->
+        <div id="download-modal" class="download-modal">
+          <!--Modal Content-->
+          <div class="modal-content">
+            <div class="flex-space-between flex-align-items-center modal-container">
+              <h3 class="modal-title">App Store</h3>
+              <span class="close">확인</span>
+            </div>
+            <hr class="modal-hr">
+            <p class="modal-container">010 6526 7935</p>
+          </div>
+        </div>
+        
+        <script>
+          var modal = document.getElementById("download-modal");
+          var btn = document.getElementById("modal-btn");
+          var close = document.getElementsByClassName("close")[0];
+          
+          btn.onclick = function() {
+            modal.style.display = "block";
+          };
+          
+          close.onclick = function() {
+            modal.style.display = "none";
+          };
+          
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+        </script>
+        
+        <a href="#" class="etc-btn">…</a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="info-middle">
+    
+    <div class="info-summary flex-space-between flex-align-items-center">
+      <div class="first">
+        <p class="big">4.9 ★★★★★</p>
+        <p class="small">9개의 평가</p>
+      </div>
+      <div class="second">
+        <p class="big">#1</p>
+        <p class="small">교육</p>
+      </div>
+      <div class="third">
+        <p class="big">20+</p>
+        <p class="small">연령</p>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <h2 class="info-section-title">미리보기</h2>
+    <div class="image-slider">
+      <div class="slider-item">
+        <%= image_tag "image-slider1.png"%>
+      </div>
+      <div class="slider-item">
+        <%= image_tag "image-slider2.png"%>
+      </div>
+      <div class="slider-item">
+        <%= image_tag "image-slider3.png"%>
+      </div>
+    </div>
+    
+    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
+    <script type="text/javascript">
+      $('.image-slider').slick({
+        accessibility: false,
+        centerMode: true,
+        centerPadding: '2%',
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 1
+      });
+    </script>
+    
+    <hr>
+    
+    <div class="description-text">
+      <p>옵티머스 먕은 인간형 AI 로봇으로, 서비스 기획과 개발을 돕는 융합형 인공지능 서비스입니다. 브레인스토밍 방식을 통해서 기획과 관련된 부분을 지원하고, IT 개념 설명과 실습 코스를 통해서 여러분이 기획한 서비스를 직접 개발할 수 있도록 돕습니다.</p>
+      <p>옵티머스 먕과 함께 놀라운 변화를 경험하세요!</p>
+    </div>
+    <a href="/myang/projects" class="developer">Myunghee Roh</a>
+    <p class="developer">개발자</p>
+    
+    <hr>
+    
+    <div class="function">
+      <div class="flex-space-between">
+        <h2 class="info-section-title">새로운 기능</h2>
+        <a href="/optimyang/version_record" class="blue-link">버전 기록</a>
+      </div>
+      <div class="flex-space-between flex-align-items-center">
+        <p class="info-section-small">버전 25.3</p>
+        <p class="info-section-small">1개월 전</p>
+      </div>
+      <div class="description-text">
+        <p>AWS 해커톤 참여</p>
+        <p>...</p>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <div class="review">
+      <div class="flex-space-between">
+        <h2 class="info-section-title">평가 및 리뷰</h2>
+        <a href="/optimyang/reviews" class="blue-link">모두 보기</a>
+      </div>
+      
+      <div class="grade flex-space-between flex-align-items-center">
+        <h3>4.9</h3>
+        <div class="grade-bar">
+          <div class="flex-align-items-center flex-space-between">
+            <div class="grade-star">
+              <p>★★★★★</p>
+            </div>
+            <div class="bar">
+              <div class="bar-value" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="flex-align-items-center flex-space-between">
+            <div class="grade-star">
+              <p>★★★★</p>
+            </div>
+            <div class="bar">
+              <div class="bar-value" style="width: 10%;"></div>
+            </div>
+          </div>
+          <div class="flex-align-items-center flex-space-between">
+            <div class="grade-star">
+              <p>★★★</p>
+            </div>
+            <div class="bar">
+              <div class="bar-value" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div class="flex-align-items-center flex-space-between">
+            <div class="grade-star">
+              <p>★★</p>
+            </div>
+            <div class="bar">
+              <div class="bar-value" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div class="flex-align-items-center flex-space-between">
+            <div class="grade-star">
+              <p>★</p>
+            </div>
+            <div class="bar">
+              <div class="bar-value" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <section class="review-card-section">
+        <article class="review-card">
+          <div class="flex-space-between">
+            <div>
+              <h4 class="review-card-title"><%= @review.title %></h4>
+              <p class="review-card-grade">★★★★★</p>
+            </div>
+            <div>
+              <p class="review-card-username"><%= @review.username %></p>
+              <p class="review-card-userinfo"><%= @review.userinfo %></p>
+            </div>
+          </div>
+          <p class="review-card-content"><%= @review.content %></p>
+        </article>
+      </section>
+      
+    </div>
+    
+    <hr>
+    
+    <div class="information">
+      <h2 class="info-section-title">정보</h2>
+      <section class="information-section">
+        <div class="flex-space-between">
+          <p class="information-header">판매자</p>
+          <p class="information-data">Myunghee Roh</p>
+        </div>
+        <hr class="information-hr">
+        <div class="flex-space-between">
+          <p class="information-header">크기</p>
+          <p class="information-data">160.3CM</p>
+        </div>
+        <hr class="information-hr">
+        <div class="flex-space-between">
+          <p class="information-header">카테고리</p>
+          <p class="information-data">교육</p>
+        </div>
+        <hr class="information-hr">
+        <div class="flex-space-between">
+          <p class="information-header">호환성</p>
+          <p class="information-data">방진아 수강생용</p>
+        </div>
+        <hr class="information-hr">
+        <div class="flex-space-between flex-align-items-center">
+          <p class="information-header">언어</p>
+          <div class="information-data flex-start flex-align-items-center" id="more-btn" onclick="more();">
+            <p>한국어 외 9개&nbsp;</p>
+            <%= image_tag "more-btn.png", class: "more-btn" %>
+          </div>
+        </div>
+        <p id="more">한국어, 영어, C, C++, Ruby, Python, R, HTML/CSS, Javascript, Java</p>
+        <script>
+          function more() {
+            document.getElementById("more").style.display = "block";
+            document.getElementById("more-btn").style.display = "none";
+          }
+        </script>
+        <hr class="information-hr">
+        <div class="flex-space-between">
+          <p class="information-header">연령</p>
+          <p class="information-data">20+</p>
+        </div>
+        <hr class="information-hr">
+        <div class="flex-space-between">
+          <p class="information-header">앱 내 구입</p>
+          <p class="information-data">사용 가능</p>
+        </div>
+        <hr class="information-hr">
+        <div class="flex-space-between">
+          <p class="information-header">저작권</p>
+          <p class="information-data">© 2018 Myunghee Roh Inc.</p>
+        </div>
+        <hr class="information-hr">
+        <div class="flex-space-between flex-align-items-center">
+          <p class="information-header"><a href="#" class="blue-link blue-small">개발자 웹 사이트</a></p>
+          <p class="information-data">
+            <a href="#">
+              <%= image_tag "developers-web-site.png", alt: "family sharing", class: "information-icon" %>
+            </a>
+          </p>
+        </div>
+      </section>
+    </div>
+    
+    <hr>
+    
+    <div class="support">
+      <h2 class="info-section-title">지원</h2>
+      <div class="support-section flex-space-between flex-align-items-center">
+        <%= image_tag "family-sharing.png", alt: "family sharing", class: "support-icon" %>
+        <div class="support-text">
+          <h3 class="support-header">친구 공유</h3>
+          <p class="support-content">친구 공유를 활성화하면 친구들과 함께 이 앱을 사용할 수 있습니다. 집순이를 밖으로 불러내 주세요. 언제든 환영합니다.</p>
+        </div>
+      </div>
+      
+      <div class="support-section flex-space-between flex-align-items-center">
+        <%= image_tag "game-center.png", alt: "game center", class: "support-icon" %>
+        <!--https://vignette.wikia.nocookie.net/logopedia/images/a/a6/Gamecenter-icon.png/revision/latest?cb=20150621234313-->
+        <div class="support-text">
+          <h3 class="support-header">Game Center</h3>
+          <p class="support-content">코인 노래방 혹은 보드게임, 방탈출 카페 등에 초대해 함께 즐거운 시간을 보낼 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>

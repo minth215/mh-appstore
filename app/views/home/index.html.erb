@@ -1,0 +1,87 @@
+<section class="container">
+  <p class="date">12월 5일 수요일</p>
+  <h1 class="section-title">투데이</h1>
+  <hr id="today-hr">
+  <div class="today-layout">
+    <article class="article-box">
+      <a href="/optimyang_info" class="article-top">
+        <h2>오늘의 앱</h2>
+      </a>
+
+      <div class="article-bottom flex-space-between">
+        <%= image_tag "app-icon.jpg", alt: "app icon", class: "today-app-icon" %>
+        <div class="today-app-description flex-space-between flex-align-items-center">
+          <div>
+            <h3>OptimusMyang</h3>
+            <p>최초의 인간형 인공지능 로봇</p>
+          </div>
+          <button id="modal-btn" class="download-btn">받기</button>
+          
+          <!--Download Modal-->
+          <div id="download-modal" class="download-modal">
+            <!--Modal Content-->
+            <div class="modal-content">
+              <div class="flex-space-between flex-align-items-center modal-container">
+                <h3 class="modal-title">App Store</h3>
+                <span class="close">확인</span>
+              </div>
+              <hr class="modal-hr">
+              <p class="modal-container">010 6526 7935</p>
+            </div>
+          </div>
+          
+          <script>
+            var modal = document.getElementById("download-modal");
+            var btn = document.getElementById("modal-btn");
+            var close = document.getElementsByClassName("close")[0];
+            
+            btn.onclick = function() {
+              modal.style.display = "block";
+            };
+            
+            close.onclick = function() {
+              modal.style.display = "none";
+            };
+            
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+          </script>
+        </div>
+      </div>
+    </article>
+    
+    <article class="article-box extra-small color-1">
+      <div class="article-bottom">
+        <div>
+          <span>추천 수업</span>
+          <h2>방송진행과아나운싱</h2>
+        </div>
+        <p>미디어인의 필수 수업</p>
+      </div>
+    </article>
+  </div>
+  
+  <div class="today-layout">
+    <article class="article-box extra-small color-2">
+      <div class="article-bottom">
+        <div>
+          <span>오늘의 밴드</span>
+          <h2>방진아이들</h2>
+        </div>
+        <p>이금희 선배님과 40 인의 방진아이들</p>
+      </div>
+    </article>
+    <article class="article-box extra-big color-3">
+      <div class="article-bottom">
+        <div>
+          <span>추천 수업</span>
+          <h2>방송언어와화법</h2>
+        </div>
+        <p>다음 학기는 이거다! 아, 저는 막 학기지만요. ㅠ</p>
+      </div>
+    </article>
+  </div>
+</section>

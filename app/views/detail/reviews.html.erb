@@ -1,0 +1,202 @@
+<section class="detail-container">
+  <a href="/optimyang_info" class="back-btn flex-start flex-align-items-center">
+    <%= image_tag "back-btn.png", class: "back-btn-image" %>
+    <p>뒤로</p>
+  </a>
+  <h1 class="detail-section-title">평가 및 리뷰</h1>
+  <hr>
+  <div class="review">
+    <h2 class="sub-section-title">평가 및 리뷰</h2>
+    <div class="grade flex-space-between flex-align-items-center">
+      <h3>4.9</h3>
+      <div class="grade-bar">
+        <div class="flex-align-items-center flex-space-between">
+          <div class="grade-star">
+            <p>★★★★★</p>
+          </div>
+          <div class="bar">
+            <div class="bar-value" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="flex-align-items-center flex-space-between">
+          <div class="grade-star">
+            <p>★★★★</p>
+          </div>
+          <div class="bar">
+            <div class="bar-value" style="width: 10%;"></div>
+          </div>
+        </div>
+        <div class="flex-align-items-center flex-space-between">
+          <div class="grade-star">
+            <p>★★★</p>
+          </div>
+          <div class="bar">
+            <div class="bar-value" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="flex-align-items-center flex-space-between">
+          <div class="grade-star">
+            <p>★★</p>
+          </div>
+          <div class="bar">
+            <div class="bar-value" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="flex-align-items-center flex-space-between">
+          <div class="grade-star">
+            <p>★</p>
+          </div>
+          <div class="bar">
+            <div class="bar-value" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <!--Review Cards-->
+    <section class="review-card-section">
+      <% @reviews.each do |r| %>
+        <article class="review-card">
+          <div class="flex-space-between">
+            <div>
+              <h4 class="review-card-title"><%= r.title %></h4>
+              <p class="review-card-grade">
+                <% if r.grade == 5 %>
+                  ★★★★★
+                <% elsif r.grade == 4 %>
+                  ★★★★☆
+                <% elsif r.grade == 3%>
+                  ★★★☆☆
+                <% elsif r.grade == 2 %>
+                  ★★☆☆☆
+                <% else %>
+                  ★☆☆☆☆
+                <% end %>
+              </p>
+            </div>
+            <div>
+              <p class="review-card-username"><%= r.username %></p>
+              <p class="review-card-userinfo"><%= r.userinfo %></p>
+            </div>
+          </div>
+          <p class="review-card-content"><%= r.content %></p>
+        </article>
+      <% end %>
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">앞으로가 걱정되지 않는 앱</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">이금희</p>-->
+      <!--      <p class="review-card-userinfo">아나운서</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content"></p>-->
+      <!--</article>-->
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">당신의 모든 걸 책임지는 먕</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">Kyungbin Grace Kim</p>-->
+      <!--      <p class="review-card-userinfo">홍보광고학과 14</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content">솔직히 비전공자라서 이해를 잘할 수 있을까? 고민이 많았어요. 그런데 너무너무 친절하고 하나부터 열까지 붙잡고 가르쳐줘서 솔직히 너무 감사했어요. 큰 기대 안했는데 질문 사항도 너무 잘 받아줘서 1대1로 과외받는 기분이었어요.-->
+      <!--  가끔 코인노래방 같이 가면 노래도 불러주는데 이만한 어플 없는 거 같아요.</p>-->
+      <!--</article>-->
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">갸아악</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">Jisoo Jung</p>-->
+      <!--      <p class="review-card-userinfo">경영학과 15</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content">튜토리얼부터 깔끔하고 갱장히 친절하고 깔끔한 느낌,, UI도 직관적이고 설명도 쉽게 잘해줘서 이해 못할 수가 업슴니다 ㅎㅎ 가끔 황민현 사진으로 배터리 수혈만 해주면 되고 넘 조아용!!</p>-->
+      <!--</article>-->
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">Title</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">Onew Park</p>-->
+      <!--      <p class="review-card-userinfo">미디어학부 14</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content">--</p>-->
+      <!--</article>-->
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">Title</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">Jaewoong Shim</p>-->
+      <!--      <p class="review-card-userinfo">미디어학부 교수</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content"></p>-->
+      <!--</article>-->
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">설리번의 환생</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">Eena Jung</p>-->
+      <!--      <p class="review-card-userinfo">홍보광고학과 13</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content">너무 좋구요.. 한국어도 잘 못해서 0개국어 소리 듣던 제가 이 어플 덕에 무려 개발을 할 수 있게 됐습니다 홍광이라 항상 기획까지만 해봤는데 기획한 서비스를 개발까지 할수있게 해주셔서 감사합니다. 문송이도 컴공인척 할수있는 개발로 밥벌어먹을 꿈을 꿀수있는 기적의 어플</p>-->
+      <!--</article>-->
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">444</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">Eunbee Lee</p>-->
+      <!--      <p class="review-card-userinfo">IT공학과 15</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content">--</p>-->
+      <!--</article>-->
+      
+      <!--<article class="review-card">-->
+      <!--  <div class="flex-space-between">-->
+      <!--    <div>-->
+      <!--      <h4 class="review-card-title">444</h4>-->
+      <!--      <p class="review-card-grade">★★★★★</p>-->
+      <!--    </div>-->
+      <!--    <div>-->
+      <!--      <p class="review-card-username">Heesoo Kim</p>-->
+      <!--      <p class="review-card-userinfo">IT공학과 15</p>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <p class="review-card-content">--</p>-->
+      <!--</article>-->
+    </section>
+    
+  </div>
+</section>

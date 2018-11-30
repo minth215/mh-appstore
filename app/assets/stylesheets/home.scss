@@ -1,0 +1,758 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$appstore-blue: #007BFF;
+$appstore-blue-hover: #004998;
+$appstore-gray: #EEF1F7;
+$appstore-gray-hover: #8F9094;
+$appstore-gray-font: #8B9093;
+$appstore-lightgray-font: #B2B4B7;
+// #838387
+
+@media only screen and (min-width: 600px) {
+  p.date {
+    color: #aaaaaa;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+  }
+  
+  .section-title {
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  
+  .today-layout {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .article-box {
+    position: relative;
+    width: 63%;
+    height: 450px;
+    border-radius: 10px;
+    background: image-url("bg2.jpg");
+    background-size: cover;
+    margin: 20px 0;
+    box-shadow: 5px 5px 50px #bbbbbb;
+    // -webkit-transition: width 0.5s;
+    // transition: width 0.5s;
+    // -webkit-transition-timing-function: ease-in-out;
+    // transition-timing-function: ease-in-out;
+  }
+  
+  .article-box:hover {
+    // width: 60%;
+  }
+  
+  .article-top, .article-bottom {
+    padding: 20px;
+  }
+  
+  .article-top {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 80%;
+    // height: 450px;
+    position: absolute;
+    bottom: 90px;
+  }
+  
+  .article-top h2 {
+    color: #FFFFFF;
+    font-size: 2.3rem;
+  }
+  
+  .article-bottom {
+    height: 20%; // 90px
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #FFFFFF;
+  }
+  
+  .today-app-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 13px;
+    border: 1px solid #D2D4D7;
+  }
+  
+  .today-app-description {
+    width: 100%;
+    margin-left: 10px;
+  }
+  
+  .today-app-description h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  
+  .today-app-description p {
+    color: $appstore-gray-font;
+    font-size: 0.7rem;
+  }
+  
+  .extra-big {
+    width: 63%;
+  }
+  
+  .extra-small {
+    width: 33%;
+  }
+  
+  .extra-big, .extra-small {
+    background-position: center;
+    background-size: cover;
+    
+    .article-bottom {
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    span {
+      color: $appstore-gray-font;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+    }
+    
+    p {
+      color: $appstore-gray-font;
+      font-size: 0.7rem;
+    }
+  }
+  
+  .color-1 {
+    background: #cce8ff;
+  }
+  
+  .today-article-image {
+    width: 90%;
+  }
+  
+  .color-2 {
+    background: #c9ddba;
+  }
+  
+  .color-3 {
+    background: #d38bb5;
+  }
+  
+  
+  // Button
+  .download-btn {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background: $appstore-gray;
+    color: $appstore-blue;
+    font-weight: 600;
+  }
+  
+  .download-btn:hover {
+    background: $appstore-gray-hover;
+    // transform: background 0.2s;
+  }
+  
+  .blue-ver {
+    background: $appstore-blue;
+    color: #FFFFFF;
+  }
+  
+  .blue-ver:hover, .etc-btn:hover {
+    background: $appstore-blue-hover;
+  }
+  
+  .etc-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background: $appstore-blue;
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding-bottom: 7px;
+    text-align: center;
+  }
+  
+  
+  
+  // info.html.erb
+  .info-container {
+    margin: 30px 20%;
+  }
+  
+  .info-top {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .info-app-icon {
+    border-radius: 25px;
+    border: 1px solid #D2D4D7;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .info-app-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+  }
+  
+  .info-app-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+  
+  .info-developer {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: $appstore-gray-font;
+  }
+  
+  .info-middle {
+    margin: 10px 0;
+  }
+  
+  .info-summary {
+    color: $appstore-gray-font;
+    margin: 10px 0;
+  }
+    
+  .big {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  
+  .small {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: $appstore-lightgray-font;
+    line-height: 0.8rem;
+  }
+  
+  // Image Slider (Slick)
+  .image-slider {
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .slider-item {
+    width: 100%;
+    margin: 4px;
+    // flex-shrink: 0;
+  }
+  
+  .slider-item img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .description-text {
+    font-size: 0.8rem;
+    margin: 10px 0;
+  }
+  
+  a.developer {
+    font-size: 0.8rem;
+    color: $appstore-blue;
+  }
+  
+  p.developer {
+    font-size: 0.7rem;
+    color: $appstore-gray-font;
+    line-height: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .info-section-title {
+    font-size: 1.1rem;
+  }
+  
+  // .blue-link {
+  //   font-size: 0.8rem;
+  //   color: $appstore-blue;
+  // }
+  
+  .info-section-small {
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: $appstore-lightgray-font;
+    line-height: 0.7rem;
+    margin-top: 5px;
+  }
+  
+  .grade {
+    h3 {
+      font-weight: 800;
+      font-size: 3.3rem;
+      color: #494A4E;
+    }
+    
+    .grade-bar {
+      line-height: 0.7rem;
+      
+      .grade-star {
+        // display: flex;
+        // justify-content: flex-end;
+        width: 60px;
+        font-size: 0.7rem;
+        color: #85868A;
+        
+        p {
+          // display: inline-block;
+          text-align: right;
+        }
+      }
+      
+      .bar {
+        width: 200px;
+        height: 3px;
+        background: #E8E9EB;
+        border-radius: 1.5px;
+        border: none;
+        margin-left: 10px;
+      }
+      
+      .bar-value {
+        height: 3px;
+        background: #85868A;
+        border-top-left-radius: 1.5px;
+        border-bottom-left-radius: 1.5px;
+        border: none;
+      }
+    }
+  }
+  
+  .review-card {
+    height: 150px;
+    background: #EDF1F7;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 10px 0;
+  }
+  
+  .review-card-title {
+    font-size: 0.7rem;
+  }
+  
+  .review-card-grade {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    color: #FC820B;
+  }
+  
+  .review-card-userinfo, .review-card-username {
+    font-size: 0.6rem;
+    text-align: right;
+    color: $appstore-gray-font;
+  }
+  
+  .review-card-content {
+    margin-top: 10px;
+    font-size: 0.7rem;
+  }
+  
+  // information
+  .information-section {
+    margin: 20px 0;
+  }
+  
+  .information-header {
+    font-size: 0.7rem;
+    color: $appstore-gray-font;
+  }
+  
+  .information-data {
+    font-size: 0.7rem;
+    text-align: right;
+  }
+  
+  .more-btn {
+    width: 15px;
+  }
+  
+  #more {
+    display: none;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+  }
+  
+  .blue-small {
+    font-size: 0.7rem !important;
+  }
+  
+  .information-icon {
+    width: 0.9rem;
+  }
+  
+  .information-hr {
+    background-color: #EEEEEE;
+    height: 1px;
+    border: 0;
+    margin: 8px 0;
+  }
+  
+  
+  // support
+  .support-section {
+    margin: 15px 0;
+  }
+  
+  .support-icon {
+    width: 50px;
+  }
+  
+  .support-text {
+    width: 90%;
+    margin-left: 15px;
+  }
+  
+  .support-header {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+  }
+  
+  .support-content {
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+    color: $appstore-gray-font;
+  }
+}
+
+
+@media only screen and (max-device-width: 600px) {
+  // index.html.erb
+  p.date {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 3.8rem;
+  }
+  
+  .today-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .article-box {
+    width: 100%;
+    height: 1000px;
+    border-radius: 25px;
+    // -webkit-transition: width 0.5s, height 0.5s;
+    // transition: width 0.5s, height 0.5s;
+    // -webkit-transition-timing-function: ease-in-out;
+    // transition-timing-function: ease-in-out;
+    margin-bottom: 50px;
+  }
+  
+  // .article-box:hover {
+  //   width: 98%;
+  //   height: 98%;
+  // }
+  
+  .article-top, .article-bottom {
+    padding: 30px;
+  }
+  
+  .article-top {
+    bottom: 200px;
+  }
+  
+  .article-top h2 {
+    color: #FFFFFF;
+    font-size: 5rem;
+  }
+  
+  .article-bottom {
+    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: #FFFFFF;
+  }
+  
+  .today-app-icon {
+    width: 140px;
+    height: 140px;
+    border-radius: 30px;
+    border: 1px solid #D2D4D7;
+  }
+  
+  .today-app-description {
+    width: 100%;
+    margin-left: 20px;
+  }
+  
+  .today-app-description h3 {
+    font-size: 2rem;
+  }
+  
+  .today-app-description p {
+    font-size: 1.8rem;
+  }
+  
+  .extra-big, .extra-small {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    
+    .article-bottom {
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    span {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    
+    h2 {
+      font-size: 4rem;
+      line-height: 4.5rem;
+    }
+    
+    p {
+      font-size: 2rem;
+    }
+  }
+  
+  // .extra-big:hover, .extra-small:hover {
+  //   width: 98%;
+  //   height: 98%;
+  // }
+  
+  
+  // Button
+  .download-btn {
+    width: 180px;
+    height: 75px;
+    border-radius: 37.5px;
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+  }
+  
+  .etc-btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 37.5px;
+    font-size: 3rem;
+    padding-bottom: 25px;
+  }
+  
+  
+  // info.html.erb
+  .info-container {
+    margin: 50px 5%;
+  }
+  
+  .info-app-icon {
+    border-radius: 70px;
+    width: 35%;
+    height: 35%;
+  }
+  
+  .info-app-description {
+    margin-left: 30px;
+  }
+  
+  .info-app-title {
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+  
+  .info-developer {
+    font-size: 1.9rem;
+    line-height: 3rem;
+  }
+    
+  .big {
+    font-size: 3.2rem;
+  }
+  
+  .small {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
+  
+  .image-slider {
+    margin: 20px 0;
+  }
+  
+  .description-text {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  a.developer {
+    font-size: 2rem;
+  }
+  
+  p.developer {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  
+  .info-section-title {
+    font-size: 3rem;
+  }
+  
+  // .blue-link {
+  //   font-size: 1.9rem;
+  // }
+  
+  // review(평가 및 리뷰)
+  .grade {
+    h3 {
+      font-size: 10rem;
+    }
+    
+    .grade-bar {
+      line-height: 1.7rem;
+      
+      .grade-star {
+        width: 160px;
+        font-size: 1.7rem;
+      }
+      
+      .bar {
+        width: 410px;
+        height: 7px;
+        border-radius: 3.5px;
+        margin-left: 30px;
+      }
+      
+      .bar-value {
+        height: 7px;
+        border-top-left-radius: 3.5px;
+        border-bottom-left-radius: 3.5px;
+      }
+    }
+  }
+  
+  .review-card {
+    height: 450px;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin: 30px 0;
+  }
+  
+  .review-card-title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .review-card-grade {
+    font-size: 2.3rem;
+    line-height: 2.6rem;
+  }
+  
+  .review-card-userinfo, .review-card-username {
+    font-size: 1.9rem;
+  }
+  
+  .review-card-content {
+    margin-top: 30px;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+  
+  // function(새로운 기능)
+  .info-section-small {
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+    margin-top: 20px;
+  }
+  
+  // information(정보)
+  .information-section {
+    margin: 50px 0;
+  }
+  
+  .information-header {
+    font-size: 2rem;
+  }
+  
+  .information-data {
+    font-size: 2rem;
+  }
+  
+  .blue-small {
+    font-size: 2rem !important;
+  }
+  
+  .information-icon {
+    width: 2.5rem;
+  }
+  
+  .information-hr {
+    background-color: #EEEEEE;
+    height: 1px;
+    border: 0;
+    margin: 20px 0;
+  }
+  
+  
+  // support(지원)
+  .support-section {
+    margin: 40px 0;
+  }
+  
+  .support-icon {
+    width: 150px;
+  }
+  
+  .support-text {
+    width: 90%;
+    margin-left: 50px;
+  }
+  
+  .support-header {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .support-content {
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+  }
+}
+
